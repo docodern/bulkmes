@@ -36,7 +36,7 @@ const Testimonials = ({ slice }) => (
            className="relative first:md:col-span-2 first:xl:col-auto drop-shadow-sm">
             <SparklesIcon className="absolute block h-14 w-14 text-main right-2 top-2 rotate-[135deg]" aria-hidden="true" />
           <div className="flex flex-col justify-between w-full h-full bg-slate-100 px-14 rounded-2xl py-14">
-            <p className="leading-normal ">
+            <p className="leading-normal text-left md:text-center">
               {item.text}
             </p>
 
