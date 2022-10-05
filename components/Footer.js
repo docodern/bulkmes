@@ -68,13 +68,8 @@ export const Footer = ({ settings }) => {
   return (
     <Bounded as="footer" className="bg-gray-800 pb-12 text-slate-300 md:pb-12">
       <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24">
-        <SignUpForm settings={settings} />
-        <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight">
-          Proudly published using{" "}
-          <PrismicLink href="https://prismic.io" className="text-white">
-            Prismic
-          </PrismicLink>
-        </div>
+        <p className="text-xl">© 2022 BulkMes.  All rights reserved.</p>
+        <p>Developed by <a href="https://docodern.dev/" target="_blank">DOCODERN</a></p>
       </div>
     </Bounded>
   );

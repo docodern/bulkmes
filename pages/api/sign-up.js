@@ -20,5 +20,5 @@ export default async function handler(req, res) {
   // This is just an example, so we won't do anything except redirect back to
   // the homepage.
 
-  res.redirect(302, "/");
+  res.redirect(302, "https://bestanimations.com/media/dancers/1920214489dancing-baby2.gif");
 }

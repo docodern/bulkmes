@@ -41,7 +41,7 @@ const TextWithImage = ({ slice }) => {
                  prismicH.isFilled.keyText(slice.primary.buttontext_2) && (
                  <PrismicLink
                    field={slice.primary.buttonlink_2}
-                   className="rounded bg-white px-7 py-3 font-bold border border-slate-100"
+                   className="rounded bg-golda/20 text-golda px-7 py-3 font-bold border border-slate-100 shadow-sm hover:bg-golda hover:text-white focus:outline-none focus:ring-2 focus:ring-golda/75 focus:ring-offset-2"
                  >
                    {slice.primary.buttontext_2}
                  </PrismicLink>
@@ -52,7 +52,7 @@ const TextWithImage = ({ slice }) => {
                  prismicH.isFilled.keyText(slice.primary.buttontext) && (
                  <PrismicLink
                    field={slice.primary.buttonlink}
-                   className="rounded bg-main px-7 py-3 font-bold text-slate-100"
+                   className="rounded bg-main px-7 py-3 font-bold text-slate-100 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                  >
                    {slice.primary.buttontext}
                  </PrismicLink>

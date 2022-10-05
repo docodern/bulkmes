@@ -46,7 +46,6 @@ const Testimonials = ({ slice }) => (
                  field={item.image}
                  width="40"
                  height="40"
-                 alt="Avatar"
                  layout="responsive"
                />
               </div>

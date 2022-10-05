@@ -25,7 +25,7 @@ const Hero = ({ slice }) => {
           prismicH.isFilled.keyText(slice.primary.buttonText) && (
             <PrismicLink
               field={slice.primary.buttonLink}
-              className="rounded bg-main px-7 py-3 font-bold text-slate-100"
+              className="rounded bg-main px-7 py-3 font-bold text-slate-100 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               {slice.primary.buttonText}
             </PrismicLink>

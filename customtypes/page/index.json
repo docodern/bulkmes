@@ -49,6 +49,9 @@
             },
             "prices": {
               "type": "SharedSlice"
+            },
+            "contacts": {
+              "type": "SharedSlice"
             }
           }
         }

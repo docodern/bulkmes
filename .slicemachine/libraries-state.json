@@ -99,6 +99,152 @@
           }
         }
       },
+      "contacts": {
+        "library": "slices",
+        "id": "contacts",
+        "name": "Contacts",
+        "description": "Contacts",
+        "model": {
+          "id": "contacts",
+          "type": "SharedSlice",
+          "name": "Contacts",
+          "description": "Contacts",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Contacts",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "title2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title2",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "adress": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Adress",
+                    "placeholder": ""
+                  }
+                },
+                "email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email",
+                    "placeholder": ""
+                  }
+                },
+                "telephone": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Telephone",
+                    "placeholder": ""
+                  }
+                },
+                "nameField": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Name Field",
+                    "placeholder": ""
+                  }
+                },
+                "emailField": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email Field",
+                    "placeholder": ""
+                  }
+                },
+                "textField": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Text Field",
+                    "placeholder": ""
+                  }
+                },
+                "buttonText": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Student",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Non est ullamco velit voluptate dolore esse sunt enim cillum eu. Enim occaecat adipisicing exercitation eu quis voluptate eu deserunt minim dolor. Occaecat ipsum eiusmod consectetur.",
+                  "spans": []
+                }
+              ],
+              "title2": [
+                {
+                  "type": "heading2",
+                  "text": "Birds",
+                  "spans": []
+                }
+              ],
+              "adress": "gold",
+              "email": "hurried",
+              "telephone": "top",
+              "nameField": "height",
+              "emailField": "eight",
+              "textField": "factor",
+              "buttonText": "activity"
+            },
+            "slice_type": "contacts"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "features": {
         "library": "slices",
         "id": "features",
@@ -571,7 +717,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\dmitr\\Desktop\\bulkmes\\bulkmes\\.slicemachine\\assets\\slices\\Prices\\default\\preview.png",
+            "width": 800,
+            "height": 744
+          }
+        }
       },
       "testimonials": {
         "library": "slices",

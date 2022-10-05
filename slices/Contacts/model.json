@@ -1,0 +1,95 @@
+{
+  "id": "contacts",
+  "type": "SharedSlice",
+  "name": "Contacts",
+  "description": "Contacts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Contacts",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "title2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "adress": {
+          "type": "Text",
+          "config": {
+            "label": "Adress",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "telephone": {
+          "type": "Text",
+          "config": {
+            "label": "Telephone",
+            "placeholder": ""
+          }
+        },
+        "nameField": {
+          "type": "Text",
+          "config": {
+            "label": "Name Field",
+            "placeholder": ""
+          }
+        },
+        "emailField": {
+          "type": "Text",
+          "config": {
+            "label": "Email Field",
+            "placeholder": ""
+          }
+        },
+        "textField": {
+          "type": "Text",
+          "config": {
+            "label": "Text Field",
+            "placeholder": ""
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

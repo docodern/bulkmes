@@ -7,8 +7,12 @@ module.exports = {
     extend: {
       colors: {
         main: '#6C55F9',
+        golda: '#F9C055',
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require("@tailwindcss/aspect-ratio")
+  ],
 };
