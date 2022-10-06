@@ -59,12 +59,11 @@
             "placeholder": ""
           }
         },
-        "buttonlink": {
-          "type": "Link",
+        "price_id": {
+          "type": "Text",
           "config": {
-            "label": "ButtonLink",
-            "placeholder": "",
-            "select": null
+            "label": "Price ID",
+            "placeholder": ""
           }
         }
       },

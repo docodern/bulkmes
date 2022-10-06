@@ -67,7 +67,7 @@ const SignUpForm = ({ settings }) => {
 export const Footer = ({ settings }) => {
   return (
     <Bounded as="footer" className="bg-gray-800 pb-12 text-slate-300 md:pb-12">
-      <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24">
+      <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24 text-center">
         <p className="text-xl">© 2022 BulkMes.  All rights reserved.</p>
         <p>Developed by <a href="https://docodern.dev/" target="_blank" rel = "noopener noreferrer">DOCODERN</a></p>
       </div>

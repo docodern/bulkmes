@@ -2,12 +2,30 @@ import React from 'react';
 import { PrismicLink, PrismicRichText } from '@prismicio/react';
 import * as prismicH from "@prismicio/helpers";
 import { RocketLaunchIcon, BanknotesIcon, ChatBubbleLeftEllipsisIcon, BoltIcon } from '@heroicons/react/24/outline'
+import { loadStripe } from '@stripe/stripe-js';
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
-const Prices = ({ slice }) => (
-  <Bounded collapsible={false} as="section" className="bg-wite">
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
+
+const Prices = ({ slice }) => {
+
+  React.useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('success')) {
+      console.log('Order placed! You will receive an email confirmation.');
+    }
+
+    if (query.get('canceled')) {
+      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+    }
+  }, []);
+  
+ return <Bounded collapsible={false} as="section" className="bg-wite">
     <div className="grid grid-cols-1 justify-center content-center text-center">
       <PrismicRichText
       field={slice.primary.title}
@@ -19,11 +37,18 @@ const Prices = ({ slice }) => (
         )
       }}
        />
+       <form action="/api/checkout_sessions" method="POST">
+      <section>
+        <button type="submit" role="link">
+          Checkout
+        </button>
+      </section>
+      </form>
        <ul className="grid grid-cols-1 md:grid-cols-3 text-left gap-10">
           {slice.items.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col place-content-between leading-relaxed py-4 px-6 gap-6 w-60 h-80 place-self-center border rounded shadow-md even:bg-main even:shadow-lg even:w-64 even:h-96 even:text-slate-100"
+              className="flex flex-col place-content-evenly leading-relaxed py-4 px-6 gap-6 w-60 h-80 place-self-center border rounded shadow-md even:bg-[#f7f6f6] even:shadow-lg even:w-64 even:h-96"
             >
               <div className="place-self-center flex flex-row gap-2">
               {(() => {
@@ -52,21 +77,19 @@ const Prices = ({ slice }) => (
               <p className="text-xl">{item.price}</p>
               </div>
               </div>
-              <div className="md:text-center">
-              <p className="text-2xl font-bold mb-6">{item.amount}</p>
-              <p>{item.text}</p>
-              </div>
-              <PrismicLink
-              field={item.buttonlink}
-              className="rounded bg-golda/20 px-7 py-3 font-bold text-golda text-center shadow-sm hover:bg-golda hover:text-white focus:outline-none focus:ring-2 focus:ring-golda/75 focus:ring-offset-2"
-            >
-              {item.buttontext}
-            </PrismicLink>
+              <form action="/api/checkout_sessions" method="POST" className="md:text-center">
+                   <p className="text-2xl font-bold mb-6">{item.amount}</p>
+                   <p>{item.text}</p>
+                   <input readOnly name="prod" value={item.price_id} hidden />
+                   <button type="submit" role="link" className={`w-full rounded ${index===1 ? "bg-[#9180fc] hover:bg-[#7d6fd8]" : "bg-golda hover:bg-[#fcb632]"} px-7 py-3 font-bold text-white text-center shadow-sm focus:outline-none focus:ring-2 focus:ring-golda/75 focus:ring-offset-2 mt-4`}>
+                      {item.buttontext}
+                   </button>
+              </form>
             </li>
           ))}
         </ul>
     </div>
   </Bounded>
-)
+}
 
 export default Prices

@@ -39,11 +39,11 @@ const Image = ({ slice }) => {
            </div>
            <div className="flex flex-row gap-6">
              <AtSymbolIcon className="block h-6 w-6 text-main" aria-hidden="true" />
-             <p>{slice.primary.email}</p>
+             <a href={`mailto:${slice.primary.email}`}>{slice.primary.email}</a>
            </div>
            <div className="flex flex-row gap-6">
              <DevicePhoneMobileIcon className="block h-6 w-6 text-main" aria-hidden="true" />
-             <p>{slice.primary.telephone}</p>
+             <a href={`tel:${slice.primary.telephone}`}>{slice.primary.telephone}</a>
            </div>
         </div>
       </div>
