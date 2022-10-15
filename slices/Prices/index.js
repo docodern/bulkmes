@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { PrismicLink, PrismicRichText } from '@prismicio/react';
 import * as prismicH from "@prismicio/helpers";
 import { RocketLaunchIcon, BanknotesIcon, ChatBubbleLeftEllipsisIcon, BoltIcon } from '@heroicons/react/24/outline'
@@ -6,24 +7,45 @@ import { loadStripe } from '@stripe/stripe-js';
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
+import getStripe from '../../utils/get-stripejs'
+import { fetchPostJSON } from '../../utils/api-helpers'
 
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
 
 const Prices = ({ slice }) => {
 
-  React.useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-    if (query.get('success')) {
-      console.log('Order placed! You will receive an email confirmation.');
-    }
+  const [loading, setLoading] = useState(false);
+  const [input, setInput] = useState(null);
+ ////
+ const handleSubmit = async (e) => {
+  e.preventDefault()
+  setLoading(true)
+  console.log("FORM: " + e.target.prod.value)
+  // Create a Checkout Session.
+  const response = await fetchPostJSON('/api/checkout_sessions', {
+    price: e.target.prod.value
+  })
 
-    if (query.get('canceled')) {
-      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
-    }
-  }, []);
+  if (response.statusCode === 500) {
+    console.error(response.message)
+    return
+  }
+
+  // Redirect to Checkout.
+  const stripe = await getStripe()
+  const { error } = await stripe.redirectToCheckout({
+    // Make the id field from the Checkout Session creation API response
+    // available to this file, so you can provide it as parameter here
+    // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+    sessionId: response.id,
+  })
+  // If `redirectToCheckout` fails due to a browser or network
+  // error, display the localized error message to your customer
+  // using `error.message`.
+  console.warn(error.message)
+  setLoading(false)
+}
+////
+
   
  return <Bounded collapsible={false} as="section" className="bg-wite">
     <div className="grid grid-cols-1 justify-center content-center text-center">
@@ -37,13 +59,6 @@ const Prices = ({ slice }) => {
         )
       }}
        />
-       <form action="/api/checkout_sessions" method="POST">
-      <section>
-        <button type="submit" role="link">
-          Checkout
-        </button>
-      </section>
-      </form>
        <ul className="grid grid-cols-1 md:grid-cols-3 text-left gap-10">
           {slice.items.map((item, index) => (
             <li
@@ -77,12 +92,16 @@ const Prices = ({ slice }) => {
               <p className="text-xl">{item.price}</p>
               </div>
               </div>
-              <form action="/api/checkout_sessions" method="POST" className="md:text-center">
+              <form onSubmit={handleSubmit} className="md:text-center">
                    <p className="text-2xl font-bold mb-6">{item.amount}</p>
                    <p>{item.text}</p>
-                   <input readOnly name="prod" value={item.price_id} hidden />
-                   <button type="submit" role="link" className={`w-full rounded ${index===1 ? "bg-[#9180fc] hover:bg-[#7d6fd8]" : "bg-golda hover:bg-[#fcb632]"} px-7 py-3 font-bold text-white text-center shadow-sm focus:outline-none focus:ring-2 focus:ring-golda/75 focus:ring-offset-2 mt-4`}>
-                      {item.buttontext}
+                   <input readOnly id="prod" name="prod" value={item.price_id} hidden />
+                   <button 
+                      type="submit"
+                      className={`w-full rounded ${index===1 ? "bg-main hover:bg-[#7d6fd8]" : "bg-[#9180fc] hover:bg-[#7d6fd8]"} px-7 py-3 font-bold text-white text-center shadow-sm focus:outline-none focus:ring-2 focus:ring-[#7d6fd8] focus:ring-offset-2 mt-4`}
+                      disabled={loading}
+                      >
+                         {item.buttontext}
                    </button>
               </form>
             </li>

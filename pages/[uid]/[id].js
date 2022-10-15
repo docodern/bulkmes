@@ -2,11 +2,13 @@ import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
-import { createClient } from "../prismicio";
-import { components } from "../slices";
-import { Layout } from "../components/Layout";
+import { createClient } from "../../prismicio";
+import { components } from "../../slices";
+import { Layout } from "../../components/Layout";
 
-const Page = ({ page, navigation, settings }) => {
+
+const IDpage = ({ page, navigation, settings }) => {
+
   
   return (
     <Layout
@@ -25,14 +27,15 @@ const Page = ({ page, navigation, settings }) => {
   );
 };
 
-export default Page;
+export default IDpage;
 
 export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const page = await client.getByUID("idpage", params.id, { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
+
 
   return {
     props: {
@@ -46,12 +49,13 @@ export async function getStaticProps({ params, locale, previewData }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const pages = await client.getAllByType("page", { lang: "*" });
+  const pages = await client.getAllByType("idpage", { lang: "*" });
 
   return {
     paths: pages.map((page) => {
       return {
-        params: { uid: page.uid },
+        params: { id: page.uid,
+                  uid: "order" },
         locale: page.lang,
       };
     }),
