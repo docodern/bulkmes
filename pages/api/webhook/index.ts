@@ -21,11 +21,13 @@ const cors = Cors({
   allowMethods: ['POST', 'HEAD'],
 })
 
+
+
 const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  
   if (req.method === 'POST') {
     const buf = await buffer(req)
     const sig = req.headers["stripe-signature"]!
-    console.log("HEADERS: " + JSON.stringify(req.headers["stripe-signature"]))
 
     let event: Stripe.Event
 
