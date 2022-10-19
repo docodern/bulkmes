@@ -14,12 +14,11 @@ import { fetchPostJSON } from '../../utils/api-helpers'
 const Prices = ({ slice }) => {
 
   const [loading, setLoading] = useState(false);
-  const [input, setInput] = useState(null);
- ////
+
+
  const handleSubmit = async (e) => {
   e.preventDefault()
   setLoading(true)
-  console.log("FORM: " + e.target.prod.value)
   // Create a Checkout Session.
   const response = await fetchPostJSON('/api/checkout_sessions', {
     price: e.target.prod.value

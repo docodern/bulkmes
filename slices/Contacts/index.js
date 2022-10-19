@@ -5,7 +5,7 @@ import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
 
-const Image = ({ slice }) => {
+const Contacts = ({ slice }) => {
   return (
     <Bounded
       collapsible={false}
@@ -103,4 +103,4 @@ const Image = ({ slice }) => {
   );
 };
 
-export default Image;
+export default Contacts;

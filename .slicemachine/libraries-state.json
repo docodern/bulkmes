@@ -99,6 +99,103 @@
           }
         }
       },
+      "cards": {
+        "library": "slices",
+        "id": "cards",
+        "name": "Cards",
+        "description": "Cards",
+        "model": {
+          "id": "cards",
+          "type": "SharedSlice",
+          "name": "Cards",
+          "description": "Cards",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Cards",
+              "primary": {
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button text",
+                    "placeholder": ""
+                  }
+                },
+                "button_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "Heading and paragraph",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,heading4"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Sit deserunt laborum sunt ut. Enim non et exercitation pariatur reprehenderit sit minim officia.",
+                    "spans": []
+                  }
+                ],
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                }
+              }
+            ],
+            "primary": {
+              "button_text": "sheet",
+              "button_link": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
+            },
+            "slice_type": "cards"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "contacts": {
         "library": "slices",
         "id": "contacts",
@@ -237,6 +334,96 @@
               "buttonText": "activity"
             },
             "slice_type": "contacts"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\dmitr\\Desktop\\bulkmes\\bulkmes\\.slicemachine\\assets\\slices\\Contacts\\default\\preview.png",
+            "width": 800,
+            "height": 648
+          }
+        }
+      },
+      "faq": {
+        "library": "slices",
+        "id": "faq",
+        "name": "Faq",
+        "description": "Faq",
+        "model": {
+          "id": "faq",
+          "type": "SharedSlice",
+          "name": "Faq",
+          "description": "Faq",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Faq",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": ""
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,o-list-item,list-item"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": "tool",
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Minim ullamco consectetur laboris consequat nisi commodo laborum aute dolor consectetur pariatur adipisicing consequat velit. Aute incididunt reprehenderit quis. Consequat ut reprehenderit eu excepteur.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Equipment",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "faq"
           }
         },
         "meta": {
@@ -597,6 +784,103 @@
           "fileName": "index",
           "extension": "js"
         },
+        "screenshotPaths": {
+          "lightSlate": {
+            "path": "C:\\Users\\dmitr\\Desktop\\bulkmes\\bulkmes\\.slicemachine\\assets\\slices\\Image\\lightSlate\\preview.png",
+            "width": 800,
+            "height": 674
+          }
+        }
+      },
+      "price_page": {
+        "library": "slices",
+        "id": "price_page",
+        "name": "PricePage",
+        "description": "PricePage",
+        "model": {
+          "id": "price_page",
+          "type": "SharedSlice",
+          "name": "PricePage",
+          "description": "PricePage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PricePage",
+              "primary": {},
+              "items": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,heading3"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button text",
+                    "placeholder": ""
+                  }
+                },
+                "price_id": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Price id",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Est aliqua culpa mollit. Do non anim duis pariatur dolore velit aliqua culpa nulla aliqua exercitation dolore. In fugiat dolore do dolor.",
+                    "spans": []
+                  }
+                ],
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+                },
+                "button_text": "least",
+                "price_id": "castle"
+              }
+            ],
+            "primary": {},
+            "slice_type": "price_page"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
         "screenshotPaths": {}
       },
       "prices": {
@@ -718,6 +1002,135 @@
             "path": "C:\\Users\\dmitr\\Desktop\\bulkmes\\bulkmes\\.slicemachine\\assets\\slices\\Prices\\default\\preview.png",
             "width": 800,
             "height": 744
+          }
+        }
+      },
+      "success_page": {
+        "library": "slices",
+        "id": "success_page",
+        "name": "SuccessPage",
+        "description": "SuccessPage",
+        "model": {
+          "id": "success_page",
+          "type": "SharedSlice",
+          "name": "SuccessPage",
+          "description": "SuccessPage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SuccessPage",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Page title",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "waiting": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Waiting",
+                    "placeholder": "Please wait text"
+                  }
+                },
+                "status": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Status",
+                    "placeholder": "Payment status text"
+                  }
+                },
+                "emailDesc": {
+                  "type": "Text",
+                  "config": {
+                    "label": "EmailDesc",
+                    "placeholder": "Text before customer email"
+                  }
+                },
+                "text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "text",
+                    "placeholder": "Please submit text"
+                  }
+                },
+                "error": {
+                  "type": "Text",
+                  "config": {
+                    "label": "error",
+                    "placeholder": "Already submitted list error"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": "Send button text"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Water",
+                  "spans": []
+                }
+              ],
+              "waiting": "settle",
+              "status": "should",
+              "emailDesc": "dish",
+              "text": "labor",
+              "error": "join",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+              },
+              "button": "course"
+            },
+            "slice_type": "success_page"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\dmitr\\Desktop\\bulkmes\\bulkmes\\.slicemachine\\assets\\slices\\SuccessPage\\default\\preview.png",
+            "width": 800,
+            "height": 454
           }
         }
       },

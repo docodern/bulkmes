@@ -24,7 +24,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero": {
+            "success_page": {
               "type": "SharedSlice"
             }
           }

@@ -8,7 +8,13 @@ import { linkResolver } from "../prismicio";
 import { Bounded } from "./Bounded";
 
 const FlagIcon = ({ lang }) => {
-  const code = lang.substring(3).toLowerCase();
+  let code
+  if (lang.length > 2) {
+    code = lang.substring(3).toLowerCase();
+  } else {
+    code = lang
+  }
+  
 
   return <span className={`fi fi-${code}`} />;
 };
@@ -73,6 +79,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 </PrismicLink>
               </li>
             ))}
+            <ul className="flex flex-row gap-x-6">
             {alternateLanguages.map((lang) => (
               <li key={lang.lang}>
                 <PrismicLink href={linkResolver(lang)} locale={lang.lang}>
@@ -81,6 +88,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 </PrismicLink>
               </li>
             ))}
+            </ul>
           </ul>
         </nav>
       </div>

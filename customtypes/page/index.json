@@ -52,6 +52,15 @@
             },
             "contacts": {
               "type": "SharedSlice"
+            },
+            "cards": {
+              "type": "SharedSlice"
+            },
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "price_page": {
+              "type": "SharedSlice"
             }
           }
         }

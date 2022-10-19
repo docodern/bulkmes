@@ -1,0 +1,50 @@
+{
+  "id": "price_page",
+  "type": "SharedSlice",
+  "name": "PricePage",
+  "description": "PricePage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PricePage",
+      "primary": {},
+      "items": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading3"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          }
+        },
+        "price_id": {
+          "type": "Text",
+          "config": {
+            "label": "Price id",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
