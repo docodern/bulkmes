@@ -1,11 +1,30 @@
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
+import axios from "axios";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
 
 const SuccessPage = ({ slice, context }) => {
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    
+    try {
+      const {
+        error
+      } = await axios.post("/api/update_payment", {
+        id: e.target.payment.value,
+      });
+  
+      if (error) throw new Error(error.message);
+  
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+  
   
   return (
     <Bounded as="section" collapsible={false} className="bg-white">
@@ -29,6 +48,10 @@ const SuccessPage = ({ slice, context }) => {
           <p>{slice.primary.emailDesc} {context.email}</p>
           <p className={`${context.description==="true" ? "text-red-500" : ""} my-6`}>{context.description==="true" ? slice.primary.error : slice.primary.text}</p>
           </div>
+          <form onSubmit={handleSubmit}>
+            <input readOnly id="payment" value={context.payment} hidden></input>
+            <button type="sumbit">Submit</button>
+          </form>
         </div>
       )}
         {prismicH.isFilled.image(slice.primary.image) && (
