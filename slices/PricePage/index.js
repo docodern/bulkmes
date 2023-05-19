@@ -13,6 +13,13 @@ import { fetchPostJSON } from '../../utils/api-helpers'
 const PricePage = ({ slice }) => {
   const [loading, setLoading] = useState(false);
 
+  const sendEmailDefault = (e) => {
+    e.preventDefault()
+    let email = "support@bulkmes.com";
+    let subject = e.target.prod.value + " komplekts";
+    window.open(`mailto:${email}?subject=${subject}`);
+  }
+
  const handleSubmit = async (e) => {
   e.preventDefault()
   setLoading(true)
@@ -72,7 +79,7 @@ const PricePage = ({ slice }) => {
                 }}
               />
               </div>
-              <form onSubmit={handleSubmit} className="text-center sm:text-right">
+              <form onSubmit={sendEmailDefault} className="text-center sm:text-right">
                    <input readOnly id="prod" name="prod" value={item.price_id} hidden />
                    <button 
                       type="submit"
