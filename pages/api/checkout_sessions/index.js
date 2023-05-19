@@ -14,7 +14,7 @@ export default async function handler(req, res) {
             quantity: 1,
           },
         ],
-        success_url: `${req.headers.origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
+        success_url: `${req.headers.origin}/lv/order/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}/canceled`,
       });
 

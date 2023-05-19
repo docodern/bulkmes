@@ -1,0 +1,80 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Library"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "name",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Volume"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "price",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "mental",
+              "type": "Text"
+            }
+          ],
+          [
+            "amount",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "fierce",
+              "type": "Text"
+            }
+          ],
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "former",
+              "type": "Text"
+            }
+          ],
+          [
+            "buttontext",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "central",
+              "type": "Text"
+            }
+          ],
+          [
+            "price_id",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "classroom",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

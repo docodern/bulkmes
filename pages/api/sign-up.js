@@ -17,17 +17,14 @@ export default async function handler(req, res) {
 
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
-  sendSmtpEmail.to = [
-     {
-       "email": "dmitrijsosipov@gmail.com"
-     }
-  ];
+  sendSmtpEmail.to = [{"email":"support@bulkmes.com"}];
   sendSmtpEmail.params = {
     "FIRSTNAME": body.name,
     "EMAIL": body.email,
-    "LASTNAME": body.text
-  }
-  sendSmtpEmail.templateId = 6
+    "TEXT": body.text
+  };
+  sendSmtpEmail.templateId = 6;
+
 
 
   const sendinblue = (sendSmtpEmail) => {

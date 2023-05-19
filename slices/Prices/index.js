@@ -15,6 +15,12 @@ const Prices = ({ slice }) => {
 
   const [loading, setLoading] = useState(false);
 
+  const sendEmailDefault = (e) => {
+    e.preventDefault()
+    let email = "support@bulkmes.com";
+    let subject = e.target.prod.value + " komplekts";
+    window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
+  }
 
  const handleSubmit = async (e) => {
   e.preventDefault()
@@ -91,7 +97,7 @@ const Prices = ({ slice }) => {
               <p className="text-xl">{item.price}</p>
               </div>
               </div>
-              <form onSubmit={handleSubmit} className="md:text-center">
+              <form onSubmit={sendEmailDefault} className="md:text-center">
                    <p className="text-2xl font-bold mb-6">{item.amount}</p>
                    <p>{item.text}</p>
                    <input readOnly id="prod" name="prod" value={item.price_id} hidden />

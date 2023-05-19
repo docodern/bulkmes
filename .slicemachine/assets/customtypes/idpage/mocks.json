@@ -1,26 +1,96 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "idpage",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "from": {
-      "id": "mock_document_id",
-      "link_type": "Document",
-      "type": "mock",
-      "tags": [],
-      "lang": "en-us",
-      "slug": null,
-      "first_publication_date": "1970-01-01T00:00:01+0000",
-      "last_publication_date": "1970-01-01T01:00:00+0000"
-    },
-    "slices": []
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "circus"
+  },
+  "from": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "success_page$d8f8a90f-075e-4d23-88bf-749a3a4bc1dc",
+        "name": "success_page",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Start"
+                  }
+                }
+              ]
+            },
+            "waiting": {
+              "__TYPE__": "FieldContent",
+              "value": "test",
+              "type": "Text"
+            },
+            "status": {
+              "__TYPE__": "FieldContent",
+              "value": "hurt",
+              "type": "Text"
+            },
+            "emailDesc": {
+              "__TYPE__": "FieldContent",
+              "value": "sky",
+              "type": "Text"
+            },
+            "text": {
+              "__TYPE__": "FieldContent",
+              "value": "audience",
+              "type": "Text"
+            },
+            "error": {
+              "__TYPE__": "FieldContent",
+              "value": "negative",
+              "type": "Text"
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+                "width": 4016,
+                "height": 6016
+              },
+              "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+              "width": 4016,
+              "height": 6016,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "button": {
+              "__TYPE__": "FieldContent",
+              "value": "command",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }
