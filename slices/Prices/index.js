@@ -19,7 +19,7 @@ const Prices = ({ slice }) => {
     e.preventDefault()
     let email = "support@bulkmes.com";
     let subject = e.target.prod.value + " komplekts";
-    window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
+    window.open(`mailto:${email}?subject=${subject}`);
   }
 
  const handleSubmit = async (e) => {
