@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }) {
       internalLinkComponent={NextLinkShim}
       richTextComponents={richTextComponents}
     >
-      <Script src={`https://cdn-cookieyes.com/client_data/ece623be2c5e90068c899f0f/script.js`} strategy="beforeInteractive">
+      <Script id="cookieyes" src={`https://cdn-cookieyes.com/client_data/ece623be2c5e90068c899f0f/script.js`} strategy="beforeInteractive">
         </Script>
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
