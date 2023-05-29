@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from 'next/script';
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 
@@ -53,6 +54,8 @@ export default function App({ Component, pageProps }) {
       internalLinkComponent={NextLinkShim}
       richTextComponents={richTextComponents}
     >
+      <Script src={`https://cdn-cookieyes.com/client_data/ece623be2c5e90068c899f0f/script.js`} strategy="beforeInteractive">
+        </Script>
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
       </PrismicPreview>
