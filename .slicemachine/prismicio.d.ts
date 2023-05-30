@@ -120,6 +120,94 @@ interface PageDocumentData {
      *
      */
     slices: prismicT.SliceZone<PageDocumentDataSlicesSlice>;
+    /**
+     * Meta title field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta description field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_description: prismicT.KeyTextField;
+    /**
+     * Meta type field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_type
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_type: prismicT.KeyTextField;
+    /**
+     * Meta sitename field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_sitename
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_sitename: prismicT.KeyTextField;
+    /**
+     * Meta image field in *Page*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_image
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    meta_image: prismicT.LinkToMediaField;
+    /**
+     * Meta image width field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_image_width
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_image_width: prismicT.KeyTextField;
+    /**
+     * Meta image height field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_image_height
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_image_height: prismicT.KeyTextField;
+    /**
+     * Meta url field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_url
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_url: prismicT.KeyTextField;
 }
 /**
  * Slice for *Page → Slice Zone*

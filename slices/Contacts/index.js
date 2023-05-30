@@ -10,7 +10,6 @@ import { Heading } from "../../components/Heading";
 const Contacts = ({ slice }) => {
   const [open, setOpen] = useState(false);
   const [fail, setFail] = useState(false);
-  const [checked, setChecked] = useState(false);
 
   const cancelButtonRef = useRef(null);
 
@@ -129,8 +128,8 @@ const Contacts = ({ slice }) => {
                className="w-4 h-4 text-blue-600 bg-white-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                required/>
             <label 
-               for="link-checkbox"
-               className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{slice.primary.checkbox} <a href="https://www.brevo.com/legal/termsofuse/" class="text-blue-600 dark:text-blue-500 hover:underline">{slice.primary.checkbox_link_text}</a>.
+               htmlFor="link-checkbox"
+               className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{slice.primary.checkbox} <a href="https://www.brevo.com/legal/termsofuse/" className="text-blue-600 dark:text-blue-500 hover:underline">{slice.primary.checkbox_link_text}</a>.
             </label>
           </span>
           <button

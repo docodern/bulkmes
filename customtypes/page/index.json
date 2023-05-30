@@ -65,6 +65,65 @@
           }
         }
       }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta description",
+          "placeholder": ""
+        }
+      },
+      "meta_type": {
+        "type": "Text",
+        "config": {
+          "label": "Meta type",
+          "placeholder": ""
+        }
+      },
+      "meta_sitename": {
+        "type": "Text",
+        "config": {
+          "label": "Meta sitename",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Link",
+        "config": {
+          "label": "Meta image",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "meta_image_width": {
+        "type": "Text",
+        "config": {
+          "label": "Meta image width",
+          "placeholder": ""
+        }
+      },
+      "meta_image_height": {
+        "type": "Text",
+        "config": {
+          "label": "Meta image height",
+          "placeholder": ""
+        }
+      },
+      "meta_url": {
+        "type": "Text",
+        "config": {
+          "label": "Meta url",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

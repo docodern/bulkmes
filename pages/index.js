@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { SliceZone } from "@prismicio/react";
+import { PrismicLink, SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
 import { components } from "../slices/";
 import { Layout } from "../components/Layout";
 
-const Index = ({ page, navigation, settings }) => {
+const Index = ({ meta, page, navigation, settings }) => {
   return (
     <Layout
       alternateLanguages={page.alternate_languages}
@@ -15,6 +15,14 @@ const Index = ({ page, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(page.data.title)}</title>
+        <meta name="title" property="og:title" content={meta.meta_title} />
+        <meta name="description" property="og:description" content={meta.meta_description} />
+        <meta name="url" property="og:url" content={meta.meta_url} />
+        <meta name="type" property="og:type" content={meta.meta_type} />
+        <meta name="site_name" property="og:site_name" content={meta.meta_sitename} />
+        <meta name="image" property="og:image" content={meta.meta_image.url} />
+        <meta name="image:width" property="og:image:width" content={meta.meta_image_width} />
+        <meta name="image:height" property="og:image:height" content={meta.meta_image_height} />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
@@ -35,6 +43,16 @@ export async function getStaticProps({ locale, previewData }) {
       page,
       navigation,
       settings,
+      meta: {
+        meta_title: page.data.meta_title,
+        meta_description: page.data.meta_description,
+        meta_url: page.data.meta_url,
+        meta_type: page.data.meta_type,
+        meta_sitename: page.data.meta_sitename,
+        meta_image: page.data.meta_image,
+        meta_image_width: page.data.meta_image_width,
+        meta_image_height: page.data.meta_image_height,
+      },
     },
   };
 }
