@@ -95,6 +95,16 @@
         "__TYPE__": "FieldContent",
         "value": "drink",
         "type": "Text"
+      },
+      "checkbox": {
+        "__TYPE__": "FieldContent",
+        "value": "door",
+        "type": "Text"
+      },
+      "checkbox_link_text": {
+        "__TYPE__": "FieldContent",
+        "value": "smell",
+        "type": "Text"
       }
     },
     "items": [

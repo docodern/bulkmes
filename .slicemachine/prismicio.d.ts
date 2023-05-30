@@ -489,6 +489,26 @@ interface ContactsSliceDefaultPrimary {
      *
      */
     popup_button: prismicT.KeyTextField;
+    /**
+     * Checkbox field in *Contacts → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.checkbox
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox: prismicT.KeyTextField;
+    /**
+     * Checkbox link text field in *Contacts → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.checkbox_link_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox_link_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for Contacts Slice

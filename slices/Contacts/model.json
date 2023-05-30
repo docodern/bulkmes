@@ -121,6 +121,20 @@
             "label": "PopUp Button",
             "placeholder": ""
           }
+        },
+        "checkbox": {
+          "type": "Text",
+          "config": {
+            "label": "Checkbox",
+            "placeholder": ""
+          }
+        },
+        "checkbox_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Checkbox link text",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
