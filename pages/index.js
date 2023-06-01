@@ -15,14 +15,14 @@ const Index = ({ meta, page, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(page.data.title)}</title>
-        <meta name="title" property="og:title" content={meta.meta_title} />
-        <meta name="description" property="og:description" content={meta.meta_description} />
-        <meta name="url" property="og:url" content={meta.meta_url} />
-        <meta name="type" property="og:type" content={meta.meta_type} />
-        <meta name="site_name" property="og:site_name" content={meta.meta_sitename} />
-        <meta name="image" property="og:image" content={meta.meta_image.url} />
-        <meta name="image:width" property="og:image:width" content={meta.meta_image_width} />
-        <meta name="image:height" property="og:image:height" content={meta.meta_image_height} />
+        <meta name="og:title" property="og:title" content={meta.meta_title} />
+        <meta name="og:description" property="og:description" content={meta.meta_description} />
+        <meta name="og:url" property="og:url" content={meta.meta_url} />
+        <meta name="og:type" property="og:type" content={meta.meta_type} />
+        <meta name="og:site_name" property="og:site_name" content={meta.meta_sitename} />
+        <meta name="og:image" property="og:image" content={meta.meta_image.url} />
+        <meta name="og:image:width" property="og:image:width" content={meta.meta_image_width} />
+        <meta name="og:image:height" property="og:image:height" content={meta.meta_image_height} />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>

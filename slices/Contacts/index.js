@@ -101,6 +101,7 @@ const Contacts = ({ slice }) => {
              id="name"
              placeholder={slice.primary.nameField}
              className="mt-6 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+             autoComplete="given-name"
              required
           />
           <input
@@ -109,6 +110,7 @@ const Contacts = ({ slice }) => {
              id="email"
              placeholder={slice.primary.emailField}
              className="mt-6 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+             autoComplete="email"
              required
           />
           <textarea
