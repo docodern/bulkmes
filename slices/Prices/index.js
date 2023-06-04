@@ -1,4 +1,5 @@
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment, useRef, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { PrismicRichText } from '@prismicio/react';
 import { RocketLaunchIcon, BanknotesIcon, ChatBubbleLeftEllipsisIcon, BoltIcon } from '@heroicons/react/24/outline'
@@ -21,6 +22,8 @@ const Prices = ({ slice }) => {
   const [ len, setLen ] = useState(160);
 
   const cancelButtonRef = useRef(null);
+  const timerRef = useRef(null);
+  const router = useRouter();
 
   const handleClose = () => {
     setOpen(false);
@@ -60,14 +63,17 @@ const Prices = ({ slice }) => {
     } 
       router.push("/success");
       setSubject("");
-      const timeout = setTimeout(() => {
-          setOpen(false);
-          setDone(false);
-        }, 5000)
-     
-        return () => clearTimeout(timeout)
+      
+      timerRef.current = setTimeout(() => {
+        setOpen(false);
+        setDone(false);
+      }, 5000);
     
-  }
+  };
+
+  useEffect(() => {
+    return () => clearTimeout(timerRef.current);
+  }, []);
 
   const handleText = async v => {
 

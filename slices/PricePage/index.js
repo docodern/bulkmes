@@ -1,4 +1,5 @@
-import React, { Fragment, useState, useRef } from 'react';
+import React, { Fragment, useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { PrismicNextImage } from '@prismicio/next';
 import { PrismicRichText } from '@prismicio/react';
@@ -20,6 +21,8 @@ const PricePage = ({ slice }) => {
   const [ len, setLen ] = useState(160);
 
   const cancelButtonRef = useRef(null);
+  const timerRef = useRef(null);
+  const router = useRouter();
 
   const handleClose = () => {
     setOpen(false);
@@ -59,14 +62,17 @@ const PricePage = ({ slice }) => {
     } 
       router.push("/success");
       setSubject("");
-      const timeout = setTimeout(() => {
-          setOpen(false);
-          setDone(false);
-        }, 5000)
      
-        return () => clearTimeout(timeout)
+      timerRef.current = setTimeout(() => {
+        setOpen(false);
+        setDone(false);
+      }, 5000);
     
-  }
+  };
+
+  useEffect(() => {
+    return () => clearTimeout(timerRef.current);
+  }, []);
 
   const handleText = async v => {
 
