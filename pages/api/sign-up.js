@@ -17,13 +17,15 @@ export default async function handler(req, res) {
 
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
+  sendSmtpEmail.subject = `${body.subject ? body.subject + " " + body.email : "Contact Form"}`;
   sendSmtpEmail.to = [{"email":"support@bulkmes.com"}];
   sendSmtpEmail.params = {
     "FIRSTNAME": body.name,
     "EMAIL": body.email,
-    "TEXT": body.text
+    "TEXT": body.text,
+    "SMS": body.sms ? body.sms : ""
   };
-  sendSmtpEmail.templateId = 6;
+  sendSmtpEmail.templateId = body.id;
 
 
 

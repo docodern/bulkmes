@@ -10,7 +10,71 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "PricePage",
-      "primary": {},
+      "primary": {
+        "popupTitle": {
+          "type": "Text",
+          "config": {
+            "label": "PopUp Title",
+            "placeholder": ""
+          }
+        },
+        "nameField": {
+          "type": "Text",
+          "config": {
+            "label": "Name Field",
+            "placeholder": ""
+          }
+        },
+        "emailField": {
+          "type": "Text",
+          "config": {
+            "label": "Email field",
+            "placeholder": ""
+          }
+        },
+        "smsText": {
+          "type": "Text",
+          "config": {
+            "label": "Sms text",
+            "placeholder": ""
+          }
+        },
+        "textField": {
+          "type": "Text",
+          "config": {
+            "label": "Text field",
+            "placeholder": ""
+          }
+        },
+        "checkbox": {
+          "type": "Text",
+          "config": {
+            "label": "checkbox",
+            "placeholder": ""
+          }
+        },
+        "checkbox_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "checkbox link text",
+            "placeholder": ""
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          }
+        },
+        "popup_button": {
+          "type": "Text",
+          "config": {
+            "label": "Popup Button",
+            "placeholder": ""
+          }
+        }
+      },
       "items": {
         "text": {
           "type": "StructuredText",

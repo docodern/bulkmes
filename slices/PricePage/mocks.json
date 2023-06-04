@@ -2,7 +2,53 @@
   {
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
-    "primary": {},
+    "primary": {
+      "popupTitle": {
+        "__TYPE__": "FieldContent",
+        "value": "castle",
+        "type": "Text"
+      },
+      "nameField": {
+        "__TYPE__": "FieldContent",
+        "value": "serve",
+        "type": "Text"
+      },
+      "emailField": {
+        "__TYPE__": "FieldContent",
+        "value": "feed",
+        "type": "Text"
+      },
+      "textField": {
+        "__TYPE__": "FieldContent",
+        "value": "having",
+        "type": "Text"
+      },
+      "checkbox": {
+        "__TYPE__": "FieldContent",
+        "value": "bee",
+        "type": "Text"
+      },
+      "checkbox_link_text": {
+        "__TYPE__": "FieldContent",
+        "value": "war",
+        "type": "Text"
+      },
+      "buttonText": {
+        "__TYPE__": "FieldContent",
+        "value": "chain",
+        "type": "Text"
+      },
+      "popup_button": {
+        "__TYPE__": "FieldContent",
+        "value": "star",
+        "type": "Text"
+      },
+      "smsText": {
+        "__TYPE__": "FieldContent",
+        "value": "differ",
+        "type": "Text"
+      }
+    },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
@@ -24,7 +70,6 @@
           [
             "image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
@@ -42,6 +87,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],

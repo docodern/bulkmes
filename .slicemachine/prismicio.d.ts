@@ -932,6 +932,102 @@ type ImageSliceVariation = ImageSliceWhite | ImageSliceLightSlate;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in PricePage → Primary
+ *
+ */
+interface PricePageSliceDefaultPrimary {
+    /**
+     * PopUp Title field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.popupTitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    popupTitle: prismicT.KeyTextField;
+    /**
+     * Name Field field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.nameField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    nameField: prismicT.KeyTextField;
+    /**
+     * Email field field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.emailField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    emailField: prismicT.KeyTextField;
+    /**
+     * Sms text field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.smsText
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    smsText: prismicT.KeyTextField;
+    /**
+     * Text field field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.textField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    textField: prismicT.KeyTextField;
+    /**
+     * checkbox field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.checkbox
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox: prismicT.KeyTextField;
+    /**
+     * checkbox link text field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.checkbox_link_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox_link_text: prismicT.KeyTextField;
+    /**
+     * Button text field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.buttonText
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttonText: prismicT.KeyTextField;
+    /**
+     * Popup Button field in *PricePage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: price_page.primary.popup_button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    popup_button: prismicT.KeyTextField;
+}
+/**
  * Item in PricePage → Items
  *
  */
@@ -985,7 +1081,7 @@ export interface PricePageSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type PricePageSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<PricePageSliceDefaultItem>>;
+export type PricePageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PricePageSliceDefaultPrimary>, Simplify<PricePageSliceDefaultItem>>;
 /**
  * Slice variation for *PricePage*
  *
@@ -1015,6 +1111,96 @@ interface PricesSliceDefaultPrimary {
      *
      */
     title: prismicT.TitleField;
+    /**
+     * PopUp Title field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.popupTitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    popupTitle: prismicT.KeyTextField;
+    /**
+     * Name field field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.nameField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    nameField: prismicT.KeyTextField;
+    /**
+     * Email field field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.emailField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    emailField: prismicT.KeyTextField;
+    /**
+     * Sms text field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.smsText
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    smsText: prismicT.KeyTextField;
+    /**
+     * Text field field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.textField
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    textField: prismicT.KeyTextField;
+    /**
+     * checkbox field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.checkbox
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox: prismicT.KeyTextField;
+    /**
+     * checkbox link text field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.checkbox_link_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    checkbox_link_text: prismicT.KeyTextField;
+    /**
+     * Button text field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.buttonText
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttonText: prismicT.KeyTextField;
+    /**
+     * Popup Button field in *Prices → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: prices.primary.popup_button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    popup_button: prismicT.KeyTextField;
 }
 /**
  * Item in Prices → Items
@@ -1553,6 +1739,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { IdpageDocumentData, IdpageDocumentDataSlicesSlice, IdpageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, BenefitsSliceDefaultPrimary, BenefitsSliceDefaultItem, BenefitsSliceDefault, BenefitsSliceVariation, BenefitsSlice, CardsSliceDefaultPrimary, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, ContactsSliceDefaultPrimary, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceVariation, FeaturesSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceWithButtonPrimary, HeroSliceWithButton, HeroSliceVariation, HeroSlice, ImageSliceWhitePrimary, ImageSliceWhite, ImageSliceLightSlatePrimary, ImageSliceLightSlate, ImageSliceVariation, ImageSlice, PricePageSliceDefaultItem, PricePageSliceDefault, PricePageSliceVariation, PricePageSlice, PricesSliceDefaultPrimary, PricesSliceDefaultItem, PricesSliceDefault, PricesSliceVariation, PricesSlice, SuccessPageSliceDefaultPrimary, SuccessPageSliceDefault, SuccessPageSliceVariation, SuccessPageSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextWithFeaturesSliceDefaultPrimary, TextWithFeaturesSliceDefaultItem, TextWithFeaturesSliceDefault, TextWithFeaturesSliceVariation, TextWithFeaturesSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceRightImagePrimary, TextWithImageSliceRightImage, TextWithImageSliceVariation, TextWithImageSlice };
+        export type { IdpageDocumentData, IdpageDocumentDataSlicesSlice, IdpageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, BenefitsSliceDefaultPrimary, BenefitsSliceDefaultItem, BenefitsSliceDefault, BenefitsSliceVariation, BenefitsSlice, CardsSliceDefaultPrimary, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, ContactsSliceDefaultPrimary, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, FaqSliceDefaultPrimary, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceVariation, FeaturesSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceWithButtonPrimary, HeroSliceWithButton, HeroSliceVariation, HeroSlice, ImageSliceWhitePrimary, ImageSliceWhite, ImageSliceLightSlatePrimary, ImageSliceLightSlate, ImageSliceVariation, ImageSlice, PricePageSliceDefaultPrimary, PricePageSliceDefaultItem, PricePageSliceDefault, PricePageSliceVariation, PricePageSlice, PricesSliceDefaultPrimary, PricesSliceDefaultItem, PricesSliceDefault, PricesSliceVariation, PricesSlice, SuccessPageSliceDefaultPrimary, SuccessPageSliceDefault, SuccessPageSliceVariation, SuccessPageSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextWithFeaturesSliceDefaultPrimary, TextWithFeaturesSliceDefaultItem, TextWithFeaturesSliceDefault, TextWithFeaturesSliceVariation, TextWithFeaturesSlice, TextWithImageSliceDefaultPrimary, TextWithImageSliceDefault, TextWithImageSliceRightImagePrimary, TextWithImageSliceRightImage, TextWithImageSliceVariation, TextWithImageSlice };
     }
 }

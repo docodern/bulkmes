@@ -13,6 +13,51 @@
             }
           }
         ]
+      },
+      "popupTitle": {
+        "__TYPE__": "FieldContent",
+        "value": "stuck",
+        "type": "Text"
+      },
+      "nameField": {
+        "__TYPE__": "FieldContent",
+        "value": "active",
+        "type": "Text"
+      },
+      "emailField": {
+        "__TYPE__": "FieldContent",
+        "value": "member",
+        "type": "Text"
+      },
+      "textField": {
+        "__TYPE__": "FieldContent",
+        "value": "meant",
+        "type": "Text"
+      },
+      "checkbox": {
+        "__TYPE__": "FieldContent",
+        "value": "slabs",
+        "type": "Text"
+      },
+      "checkbox_link_text": {
+        "__TYPE__": "FieldContent",
+        "value": "weak",
+        "type": "Text"
+      },
+      "buttonText": {
+        "__TYPE__": "FieldContent",
+        "value": "nuts",
+        "type": "Text"
+      },
+      "popup_button": {
+        "__TYPE__": "FieldContent",
+        "value": "scene",
+        "type": "Text"
+      },
+      "smsText": {
+        "__TYPE__": "FieldContent",
+        "value": "same",
+        "type": "Text"
       }
     },
     "items": [

@@ -10,11 +10,13 @@ import { Heading } from "../../components/Heading";
 const Contacts = ({ slice }) => {
   const [open, setOpen] = useState(false);
   const [fail, setFail] = useState(false);
+  const [done, setDone] = useState(false);
 
   const cancelButtonRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setOpen(true);
  
     const response = await fetch(`/api/sign-up`, {
       method: "POST",
@@ -24,17 +26,25 @@ const Contacts = ({ slice }) => {
         body: JSON.stringify({
           email: e.target.email.value,
           name: e.target.name.value,
-          text: e.target.text.value
+          text: e.target.text.value,
+          id: 6
          })
     })
     if (response.status === 400) {
       console.error(response.message)
+      setDone(true);
       setFail(true);
-      setOpen(true);
-      return
-    } 
+    } else {
+      setDone(true);
+      setFail(false);
+    }
+  }
+
+  const handleClose = () => {
+    location.reload();
+    setOpen(false);
+    setDone(false);
     setFail(false);
-    setOpen(true);
   }
 
   return (
@@ -146,7 +156,7 @@ const Contacts = ({ slice }) => {
      </div>
 
      <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={handleClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -171,6 +181,9 @@ const Contacts = ({ slice }) => {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                {
+                  done ?
+                <>
                 <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
                     <div className={`mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full ${fail ? "bg-red-100" : "bg-green-100"} sm:mx-0 sm:h-10 sm:w-10`}>
@@ -192,12 +205,21 @@ const Contacts = ({ slice }) => {
                   <button
                     type="button"
                     className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                    onClick={() => setOpen(false)}
+                    onClick={handleClose}
                     ref={cancelButtonRef}
                   >
                     {slice.primary.popup_button}
                   </button>
                 </div>
+                </>
+                : <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                   <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                      <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                        Loading...
+                      </Dialog.Title>
+                   </div>
+                  </div>
+                }
               </Dialog.Panel>
             </Transition.Child>
           </div>

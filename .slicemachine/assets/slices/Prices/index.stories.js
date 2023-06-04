@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"name":[{"type":"heading3","text":"Water","spans":[]}],"price":"pile","amount":"identity","text":"give","buttontext":"evening","price_id":"essential"}],"primary":{"title":[{"type":"heading2","text":"Offer","spans":[]}]},"slice_type":"prices","id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"name":[{"type":"heading3","text":"Volume","spans":[]}],"price":"mental","amount":"fierce","text":"former","buttontext":"central","price_id":"classroom"}],"primary":{"title":[{"type":"heading2","text":"Library","spans":[]}],"popupTitle":"stuck","nameField":"active","emailField":"member","smsText":"same","textField":"meant","checkbox":"slabs","checkbox_link_text":"weak","buttonText":"nuts","popup_button":"scene"},"id":"_Default","slice_type":"prices"}} />
 _Default.storyName = ''
