@@ -19,7 +19,7 @@ const Page = ({ page, navigation, settings }) => {
           {prismicH.asText(page.data.title)} |{" "}
           {prismicH.asText(settings.data.siteTitle)}
         </title>
-         <script id="google-analytics" strategy="afterInteractive">
+         <script id="google-analytics" >
            {`  gtag('event', 'conversion', {
                'send_to': 'AW-11202394850/sCa_CK_-yaYYEOL1290p',
                'transaction_id': ''
