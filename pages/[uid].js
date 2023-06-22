@@ -21,7 +21,7 @@ const Page = ({ page, navigation, settings }) => {
         </title>
          <script id="google-analytics" dangerouslySetInnerHTML={{ __html: 
         `  gtag('event', 'conversion', {
-          'send_to': 'AW-11202394850/sCa_CK_-yaYYEOL1290p',
+          'send_to': '${process.env.NEXT_PUBLIC_GA_ID}/sCa_CK_-yaYYEOL1290p',
           'transaction_id': ''
            }); `
            }}>
