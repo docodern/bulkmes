@@ -22,13 +22,13 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11202394850" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11202394850" strategy="afterInteractive" ></Script>
          <Script id="google-analytics" async strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          gtag('config', 'AW-11202394850');
-         `}} />
+         `}} ></Script>
       </Head>
       <body className="overflow-x-hidden antialiased">
         <Main />
