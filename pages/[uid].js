@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
+import Script from 'next/script';
 
 import { createClient } from "../prismicio";
 import { components } from "../slices";
@@ -19,12 +20,13 @@ const Page = ({ page, navigation, settings }) => {
           {prismicH.asText(page.data.title)} |{" "}
           {prismicH.asText(settings.data.siteTitle)}
         </title>
-         <script id="google-analytics" >
-           {`  gtag('event', 'conversion', {
-               'send_to': 'AW-11202394850/sCa_CK_-yaYYEOL1290p',
-               'transaction_id': ''
-                }); `}
-         </script>
+         <Script async id="google-analytics" dangerouslySetInnerHTML={{ __html: 
+        `  gtag('event', 'conversion', {
+          'send_to': 'AW-11202394850/sCa_CK_-yaYYEOL1290p',
+          'transaction_id': ''
+           }); `
+           }}>
+         </Script>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>

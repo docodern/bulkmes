@@ -55,11 +55,12 @@ export default function App({ Component, pageProps }) {
       richTextComponents={richTextComponents}
     >
       <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11202394850" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-           {` window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11202394850'); `}
+         <Script id="google-analytics" async strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'AW-11202394850');
+         `}}>
          </Script>
       <Script id="cookieyes" src={`https://cdn-cookieyes.com/client_data/ece623be2c5e90068c899f0f/script.js`} strategy="beforeInteractive">
         </Script>
